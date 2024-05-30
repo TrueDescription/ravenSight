@@ -1,6 +1,9 @@
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator";
+import { Input } from "@/components/ui/input"
+
  
 
 // function Login() {
@@ -28,12 +31,12 @@ import { Button } from "@/components/ui/button"
 
 function Login() {
   return (
-          <div>
+          <div className="wrapping_div">
               <div className="header__navbar">
                   <div className="header__logo">
                       <h1 className="header__logo-title">RavenSight</h1>
                       {/* <img src="https://www.freeiconspng.com/thumbs/raven-png/raven-png-photo-10.png" alt="RavenSight Icon" width="30" height="24" /> */}
-                      <img src="../ravenSightLogo.png" alt="RavenSight Icon" width="30" height="24" />
+                      <img src="https://raw.githubusercontent.com/TrueDescription/ravenSight/main/frontend/src/ravenSightLogo.png" alt="RavenSight Icon" width="30" height="24" />
 
                   </div>
                   <div className="header__nav-links">
@@ -50,14 +53,16 @@ function Login() {
                           <h1 className="heading-primary">Welcome to RavenSight</h1>
                           <p className="paragraph-primary">Enjoy free trading, real-time information, and take control of your financial journey today.</p>
                       </div>
+                      <Separator orientation="vertical" />
                       <div className="main__right">
                           <form method="post">
                               <div>
-                                  <input type="text" id="username" name="username" required placeholder="Username" />
+                                  <Input type="text" id="username" name="username" required placeholder="Username" />
+                                  
                                   <label htmlFor="username">Username</label>
                               </div>
                               <div>
-                                  <input type="password" id="password" name="password" required placeholder="Password" />
+                                  <Input type="password" id="password" name="password" required placeholder="Password" />
                                   <label htmlFor="password">Password</label>
                               </div>
                               <div>
@@ -65,8 +70,8 @@ function Login() {
                                       <input type="checkbox" value="remember-me" /> Remember me
                                   </label>
                               </div>
-                              <button type="submit">Log in</button>
-                              <button type="submit">Sign up</button>
+                              <Button variant="secondary" type="submit">Log in</Button>
+                              <Button variant="secondary" type="submit">Sign up</Button>
                               <hr className="my-4" />
                               <small className="text-body-secondary">By clicking Log in, you agree to the terms of use.</small>
                           </form>
@@ -108,11 +113,33 @@ function Login() {
   );
 }
 
+export function SeparatorDemo() {
+  return (
+    <div>
+      <div className="space-y-1">
+        <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
+        <p className="text-sm text-muted-foreground">
+          An open-source UI component library.
+        </p>
+      </div>
+      <Separator className="my-4" />
+      <div className="flex h-5 items-center space-x-4 text-sm">
+        <div>Blog</div>
+        <Separator orientation="vertical" />
+        <div>Docs</div>
+        <Separator orientation="vertical" />
+        <div>Source</div>
+      </div>
+    </div>
+  )
+}
+
 
 export default function Home() {
   return (
     <div>
       <Login/>
+      {/* <SeparatorDemo/> */}
     </div>
   )
 }
