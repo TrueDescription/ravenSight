@@ -6,6 +6,7 @@ import { PortfolioBox } from '@/components/ui/portfolioBox';
 import { DataTable } from '@/components/ui/stockList';
 import { columns, Stock } from '@/components/ui/columns';
 import { Login } from "@/components/ui/login";
+import { StockPage } from '@/components/ui/stockPage';
 
 
 
@@ -41,8 +42,9 @@ function Dashboard() {
 export default function Home() {
   return (
     <div>
-      <Login/>
-      <Dashboard />
+      {/* <Login/>
+      <Dashboard /> */}
+      <StockPage/>
     </div>
   )
 }
