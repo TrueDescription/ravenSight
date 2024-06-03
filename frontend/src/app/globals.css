@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer div {
+  margin: 10px;
+}
+
+.info-cards {
+  display: flex;
+}
+
+.login-button {
+  margin-right: 5px;
+}
+
 body {
   margin: 0;
   padding: 0;
